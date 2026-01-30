@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.7.1/aframe.min.js">
+    </script>
+    <title>A-Frame Starter</title>
+  </head>
+  <body>
+  <a-scene>
+
+  <!--sphere (parent) -->
+  <a-entity 
+  geometry="primitive:sphere" 
+  material="color: #E76A24" 
+  position="0 1.25 -5"
+  rotation="0 45 0" 
+  radius=".5">
+
+    <!--star (child) -->
+    <a-image
+    src=""
+    position="0 0 0.6"
+    rotation="0 180 0"
+    width="0.4"
+    height="0.4">
+    </a-image>
+
+  </a-entity>
+
+  <!--plane-->
+    <a-entity 
+    geometry="primitive: plane; width: 4; height: 4"
+    position= "0 0 -4"
+    rotation= "-90 0 0" 
+    material= "color: #FBBC42">
+  </a-entity>
+
+  <a-sky color="#87CEEB"></a-sky>
+
+  </a-scene>
+  </body>
+</html>
