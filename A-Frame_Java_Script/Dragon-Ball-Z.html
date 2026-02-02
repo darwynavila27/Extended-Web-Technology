@@ -1,41 +1,120 @@
+<!DOCTYPE html>
 <html>
-  <head>
-    <script src="https://aframe.io/releases/1.7.1/aframe.min.js">
-    </script>
-    <title>A-Frame Starter</title>
-  </head>
-  <body>
-  <a-scene>
+<head>
+  <script src="https://aframe.io/releases/1.7.1/aframe.min.js"></script>
+</head>
+  <title>7 Dragon Balls Rotating</title>
+<body>
+<a-scene>
 
-  <!--sphere (parent) -->
-  <a-entity 
-  geometry="primitive:sphere" 
-  material="color: #E76A24" 
-  position="0 1.25 -5"
-  rotation="0 45 0" 
-  radius=".5">
+  <!--Camera-->
+  <a-camera position="0 1.6 0"></a-camera>
 
-    <!--star (child) -->
-    <a-image
-    src=""
-    position="0 0 0.6"
-    rotation="0 180 0"
-    width="0.4"
-    height="0.4">
-    </a-image>
+  <!--Orbit-->
+  <a-entity position="0 1.5 -5"
+    animation="property: rotation; to: 0 360 0; loop: true; dur: 3000; easing: linear">
+
+    <!--1-Star-->
+    <a-entity position="3 0 0"
+      animation="property: position; to: 3 0.3 0; dur: 1500; dir: alternate; loop: true">
+      <a-sphere radius="0.35" color="#ffaa00" opacity="0.3"></a-sphere>
+      <a-sphere radius="0.3" color="#ff9900"></a-sphere>
+      <a-circle radius="0.05" color="red" position="0 0 0.31"></a-circle>
+    </a-entity>
+
+    <!--2-Star-->
+    <a-entity position="-3 0 0"
+      animation="property: position; to: -3 0.3 0; dur: 1500; dir: alternate; loop: true">
+      <a-sphere radius="0.35" color="#ffaa00" opacity="0.3"></a-sphere>
+      <a-sphere radius="0.3" color="#ff9900"></a-sphere>
+      <a-circle radius="0.05" color="red" position="-0.05 0 0.31"></a-circle>
+      <a-circle radius="0.05" color="red" position="0.05 0 0.31"></a-circle>
+    </a-entity>
+
+    <!--3-Star-->
+    <a-entity position="0 0 3"
+      animation="property: position; to: 0 0.3 3; dur: 1500; dir: alternate; loop: true">
+      <a-sphere radius="0.35" color="#ffaa00" opacity="0.3"></a-sphere>
+      <a-sphere radius="0.3" color="#ff9900"></a-sphere>
+      <a-circle radius="0.05" color="red" position="-0.06 0.04 0.31"></a-circle>
+      <a-circle radius="0.05" color="red" position="0.06 0.04 0.31"></a-circle>
+      <a-circle radius="0.05" color="red" position="0 -0.05 0.31"></a-circle>
+    </a-entity>
+
+    <!--4-Star-->
+    <a-entity position="0 0 -3"
+      animation="property: position; to: 0 0.3 -3; dur: 1500; dir: alternate; loop: true">
+      <a-sphere radius="0.35" color="#ffaa00" opacity="0.3"></a-sphere>
+      <a-sphere radius="0.3" color="#ff9900"></a-sphere>
+      <a-circle radius="0.05" color="red" position="-0.06 0.06 0.31"></a-circle>
+      <a-circle radius="0.05" color="red" position="0.06 0.06 0.31"></a-circle>
+      <a-circle radius="0.05" color="red" position="-0.06 -0.06 0.31"></a-circle>
+      <a-circle radius="0.05" color="red" position="0.06 -0.06 0.31"></a-circle>
+    </a-entity>
+
+    <!--5-Star-->
+    <a-entity position="2 0 2"
+      animation="property: position; to: 2 0.3 2; dur: 1500; dir: alternate; loop: true">
+      <a-sphere radius="0.35" color="#ffaa00" opacity="0.3"></a-sphere>
+      <a-sphere radius="0.3" color="#ff9900"></a-sphere>
+      <a-circle radius="0.045" color="red" position="0 0.07 0.31"></a-circle>
+      <a-circle radius="0.045" color="red" position="-0.07 0.02 0.31"></a-circle>
+      <a-circle radius="0.045" color="red" position="0.07 0.02 0.31"></a-circle>
+      <a-circle radius="0.045" color="red" position="-0.04 -0.06 0.31"></a-circle>
+      <a-circle radius="0.045" color="red" position="0.04 -0.06 0.31"></a-circle>
+    </a-entity>
+
+    <!--6-Star-->
+    <a-entity position="-2 0 2"
+      animation="property: position; to: -2 0.3 2; dur: 1500; dir: alternate; loop: true">
+      <a-sphere radius="0.35" color="#ffaa00" opacity="0.3"></a-sphere>
+      <a-sphere radius="0.3" color="#ff9900"></a-sphere>
+      <a-circle radius="0.045" color="red" position="-0.06 0.06 0.31"></a-circle>
+      <a-circle radius="0.045" color="red" position="0.06 0.06 0.31"></a-circle>
+      <a-circle radius="0.045" color="red" position="-0.06 0 0.31"></a-circle>
+      <a-circle radius="0.045" color="red" position="0.06 0 0.31"></a-circle>
+      <a-circle radius="0.045" color="red" position="-0.06 -0.06 0.31"></a-circle>
+      <a-circle radius="0.045" color="red" position="0.06 -0.06 0.31"></a-circle>
+    </a-entity>
+
+    <!--7-Star-->
+    <a-entity position="0 0 0"
+      animation="property: position; to: 0 0.3 0; dur: 1500; dir: alternate; loop: true">
+      <a-sphere radius="0.35" color="#ffaa00" opacity="0.3"></a-sphere>
+      <a-sphere radius="0.3" color="#ff9900"></a-sphere>
+      <a-circle radius="0.045" color="red" position="0 0.08 0.31"></a-circle>
+      <a-circle radius="0.045" color="red" position="-0.06 0.04 0.31"></a-circle>
+      <a-circle radius="0.045" color="red" position="0.06 0.04 0.31"></a-circle>
+      <a-circle radius="0.045" color="red" position="-0.08 -0.02 0.31"></a-circle>
+      <a-circle radius="0.045" color="red" position="0.08 -0.02 0.31"></a-circle>
+      <a-circle radius="0.045" color="red" position="-0.04 -0.08 0.31"></a-circle>
+      <a-circle radius="0.045" color="red" position="0.04 -0.08 0.31"></a-circle>
+    </a-entity>
 
   </a-entity>
 
-  <!--plane-->
-    <a-entity 
-    geometry="primitive: plane; width: 4; height: 4"
-    position= "0 0 -4"
-    rotation= "-90 0 0" 
-    material= "color: #FBBC42">
-  </a-entity>
+  <!--Planet Namek Sky-->
+  <a-sky color="#66cc66"></a-sky>
 
-  <a-sky color="#87CEEB"></a-sky>
+  <!--Water-->
+  <a-plane rotation="-90 0 0" 
+  width="40" 
+  height="10" 
+  color="#3399ff"
+  opacity="0.75"
+  animation="property: opacity; to: 0.65; dur: 4000; dir: alternate; loop: true"></a-plane>
 
-  </a-scene>
-  </body>
+  <!--Planet Namek Moons-->
+  <a-sphere position="8 10 -15"
+  radius="2"
+  color="#C0C0C0"
+  animation="property: rotation; to: 0 360 0; dur: 60000; loop: true"></a-sphere>
+
+  <a-sphere position="-8 10 -15"
+  radius="2"
+  color="#A9A9A9"
+  animation="property: rotation; to: 0 -360 0; dur: 90000; loop: true"></a-sphere>
+
+</a-scene>
+</body>
 </html>
